@@ -1,0 +1,23 @@
+uses crt;
+var
+s:char;
+Begin
+clrscr;
+Writeln('ANA MENU':40);
+Writeln('********':40);
+Writeln('1.GiRòû ':40);
+Writeln('2.LiSTE ':40);
+Writeln('3.ÄIKIû ':40);
+Writeln;
+Write('SEÄòMòNòZ [1  2  3] ......: ':48);
+Repeat
+s:=Readkey;
+Until s in ['1'..'3',#27];
+clrscr;
+case s of
+'1':Writeln('Giriü iülemleri':40);
+'2':Writeln('Listeleme iülemleri':40);
+'3':Writeln('Äçkçü òülemi':40);
+End;
+Readln;
+END.
