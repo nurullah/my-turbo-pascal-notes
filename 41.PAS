@@ -1,0 +1,36 @@
+uses crt;
+var
+ad:array[1..15]of string;
+notu:array[1..15,1..3] of integer;
+ort:array[1..15] of real;
+a,b:byte;
+begin
+clrscr;
+for a:=1 to 15 do
+begin
+writeln(a, '.Adç Giriniz :'); readln(ad[a]);
+for b:=1 to 3 do
+begin
+writeln(ad[a] ,' òsimli ôßrencinin ',b,'. Notunu Giriniz :');
+readln(notu[a,b]);
+end;
+ort[a]:=(notu[a,1]+notu[a,2]+notu[a,3])/3;
+end;
+clrscr;
+gotoxy(10,2);writeln('adç Soyadç');
+gotoxy(30,2);writeln('1. Notu');
+gotoxy(40,2);writeln('2. Notu');
+gotoxy(50,2);writeln('3. Notu');
+gotoxy(60,2);writeln('Ortalamasç');
+gotoxy(10,3);writeln
+('=======================================================================');
+for a:=1 to 15 do
+begin
+gotoxy(10,a+4);writeln(ad[a]);
+gotoxy(30,a+4);writeln(notu[a,1]);
+gotoxy(40,a+4);writeln(notu[a,2]);
+gotoxy(50,a+4);writeln(notu[a,3]);
+gotoxy(60,a+4);writeln(ort [a]:0:0);
+end;
+readln;
+end.
