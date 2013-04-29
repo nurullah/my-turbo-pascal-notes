@@ -1,0 +1,27 @@
+uses crt;
+procedure cerceve(x1,y1,x2,y2:byte);
+var
+a:integer;
+cizgi:string[80];
+Begin
+fillchar (cizgi,80,#205);
+cizgi[0]:=chr(x2-x1-1);
+gotoxy(x1,y1);write(chr(201),cizgi,chr(187));
+for a:=y1+1 to y2-1 do
+Begin
+gotoxy(x1,a);write(chr(186));
+gotoxy(x2,a);write(chr(186));
+end;
+gotoxy(x1,y2);write(chr(200),cizgi,chr(188));
+end;
+begin
+clrscr;
+cerceve(2,1,36,5);
+cerceve(2,3,13,5);
+cerceve(14,3,24,5);
+cerceve(25,3,36,5);
+cerceve(37,3,48,5);
+cerceve(49,3,60,5);
+cerceve(61,3,72,5);
+Readln;
+End.
