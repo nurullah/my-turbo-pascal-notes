@@ -1,0 +1,16 @@
+uses crt;
+var
+i:byte;
+a:string;
+begin
+clrscr;
+repeat
+readln(a);
+for i:=1 to length(a) do
+begin
+write(a[i]);
+delay(100);
+end;
+until i<100;
+readln;
+end.
